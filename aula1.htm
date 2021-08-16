@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="pt-br">
+    <head>
+        <meta name="viewport" content="width= devide width, height=device-height, initial-scale=1.0"/>
+        <meta name="Rick" content="2A - DS - REVISÃO"/>
+        <meta charset ="utf-8"/>
+        <link rel="stylesheet" href="aula1.css">
+        <script language="JavaScript"> // Chamou o JS
+                function Limpar() { //Função com mesmo nome OnClick, ele faz a limpeza e deixa o focus na txtpeso
+                        window.document.getElementById("txtpeso").focus();
+                }
+                function Calcular() {
+                    var peso = document.getElementById("txtpeso").value // variavel peso
+                    var altura = document.getElementById("txtaltura").value // variavel alltura
+                    var imc; 
+                        if (isNaN(peso) || peso == "")
+                    {
+                        window.alert("Digite números!"); // começar com window
+                        document.getElementById("txtpeso").value=""; 
+                        document.getElementById("txtaltura").value=""; 
+                        document.getElementById("txtpeso").focus(); 
+                        
+                    }
+                         else if (isNaN(altura) || altura == "")
+                    {
+                         window.alert("Digite números!");
+                        document.getElementById("txtaltura").value=""; 
+                        document.getElementById("txtaltura").focus(); 
+                    }
+                        else { // EXECUTA esse bloco se NENHUMA das acima forem VERDADEIRAS
+                            peso=parseFloat(peso);
+                            altura=parseFloat(altura);
+                            imc=peso/(altura*altura);
+                            document.getElementById("txtimc").value=imc;
+                            if(imc<18.5)
+                        {
+                        document.getElementById("txtmsg").value=
+                                "Sinto muito... Está magro demais!";
+                            }
+                        else if(imc<24.9)
+                            {
+                                document.getElementById("txtmsg").value=
+                                "Parabéns... Está na faixa de peso ideal!";
+                            }
+                        else if(imc<30.1)
+                            {
+                                document.getElementById("txtmsg").value=
+                                "Cuidado, você está em sobrepeso!";
+                            }
+                        else
+                            {
+                                document.getElementById("txtmsg").value=
+                                "Muito cuidado, você está obeso ou obesa!"
+                            }
+                    }
+                }
+        </script>
+    </head>
+
+    <body>
+            <form>
+                <h1>Calculadora de IMC</h1>
+               <label for="txtpeso">Informe seu peso:</label>  &nbsp; &nbsp; &nbsp; &nbsp;<!-- &nbsp = espaço -->
+                <input type="text" id="txtpeso"/><br/> <!--type text pré definido-->
+
+                <label for="txtaltura">Informe sua altura:</label> &nbsp; &nbsp; &nbsp; <!-- &nbsp = espaço -->
+                <input type="text" id="txtaltura"/><br/><br/> <!--type text pré definido--> 
+
+                <label for="txtimc">Seu IMC é</label> &nbsp; <!-- &nbsp = espaço -->
+                <input type="text" id="txtimc" disabled/><br/><br/> 
+
+                <textarea id="txtmsg" cols="40" rows="2" disabled> </textarea><br/><br/>
+
+                <input type="button" value="Calcular" id="btn" onClick="Calcular()"/> &nbsp; <!-- &nbsp = espaço -->          
+                <input type="reset" value="Limpar" id="btn" onClick="Limpar()"/> &nbsp; <!-- reset pré definido para limpar, value para legendar os 
+                                                                                botoes e onclick para programar no js -->
+            </form>
+    </body>
+</html>
