@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: linear-gradient(45deg, #8e2de2, #4a00e0);
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    min-width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;    
+    color: black;
+}
+form {
+    padding: 10px;
+    text-align: center;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 20px;    
+    background-color: white;;
+}
+#txtpeso {
+    border-radius: 3px;
+}
+#txtalura {
+    border-radius: 3px;
+}
+#txtimc {
+    border-radius: 3px;
+    background-color: rgba(0, 0, 0, 0.082);
+    color: rgba(0, 0, 0, 0.596);
+}
+label {
+        font-weight: 600;
+        margin-bottom: 2rem;
+        position: relative;  
+}
+input {
+        outline: none;
+        color: rgba(0, 0, 0, 0.7);
+    }
+input[type="text"] {
+    background-color: rgba(0, 0, 0, 0.082); 
+    padding: 2px;
+}
+textarea {
+    background-color: rgba(0, 0, 0, 0.082); 
+    resize: none;
+    border-radius: 7px;
+    color: rgba(0, 0, 0, 0.658);
+}
+#txtmsg {
+    color: rgb(0, 0, 0);
+    font-weight: bolder;
+    text-align: center;
+}
+#btn {
+    padding: 0.4rem;
+    background: linear-gradient(to left, #4776E6, #8e54e9);
+    cursor: pointer;
+    color: white;
+    font-size: 0.9rem;
+    font-weight: 300;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    width: 45%;
+ }
+#btn:hover {
+    letter-spacing: 0.5px;
+    background: linear-gradient(to right, #4776E6, #8e54e9);
+    cursor: pointer;
+ }
