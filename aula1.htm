@@ -5,6 +5,7 @@
         <meta name="Rick" content="2A - DS - REVISÃO"/>
         <meta charset ="utf-8"/>
         <link rel="stylesheet" href="aula1.css">
+        <title>IMC</title>
         <script language="JavaScript"> // Chamou o JS
                 function Limpar() { //Função com mesmo nome OnClick, ele faz a limpeza e deixa o focus na txtpeso
                         window.document.getElementById("txtpeso").focus();
@@ -15,7 +16,7 @@
                     var imc; 
                         if (isNaN(peso) || peso == "")
                     {
-                        window.alert("Digite números!"); // começar com window
+                        window.alert("Digite números válidos!"); // começar com window
                         document.getElementById("txtpeso").value=""; 
                         document.getElementById("txtaltura").value=""; 
                         document.getElementById("txtpeso").focus(); 
